@@ -50,21 +50,27 @@ fun_fact:    "I write Python by day and MATLAB package managers by night."
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/MarekWadinger/adaptive-interpretable-ad">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MarekWadinger&repo=adaptive-interpretable-ad&hide_border=true&bg_color=0D1117&title_color=E91E63&icon_color=00BCD4&text_color=F8F8F2" alt="AID"/>
-      </a>
-      <p align="center">
+      <h3><a href="https://github.com/MarekWadinger/adaptive-interpretable-ad">🔍 adaptive-interpretable-ad</a></h3>
+      <p>Self-supervised online anomaly detection with dynamic operating limits &mdash; learns the process, flags faults, and explains why.</p>
+      <p>
+        <img src="https://img.shields.io/github/stars/MarekWadinger/adaptive-interpretable-ad?style=flat-square&color=E91E63&logo=github&logoColor=white" alt="stars"/>
+        <img src="https://img.shields.io/github/forks/MarekWadinger/adaptive-interpretable-ad?style=flat-square&color=00BCD4&logo=github&logoColor=white" alt="forks"/>
         <a href="https://doi.org/10.1016/j.eswa.2024.123200"><img src="https://img.shields.io/badge/Paper-ESWA%202024-E91E63?style=flat-square&logo=elsevier&logoColor=white" alt="paper"/></a>
+      </p>
+      <p>
         <img src="https://img.shields.io/badge/anomaly%20detection-00BCD4?style=flat-square" alt="anomaly detection"/>
         <img src="https://img.shields.io/badge/interpretable-FF1F8E?style=flat-square" alt="interpretable"/>
       </p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/MarekWadinger/tf2ss">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MarekWadinger&repo=tf2ss&hide_border=true&bg_color=0D1117&title_color=E91E63&icon_color=00BCD4&text_color=F8F8F2" alt="tf2ss"/>
-      </a>
-      <p align="center">
+      <h3><a href="https://github.com/MarekWadinger/tf2ss">⚡ tf2ss</a></h3>
+      <p>Pure-Python MIMO transfer-function to state-space conversion &mdash; MATLAB-consistent results without a Fortran compiler.</p>
+      <p>
+        <img src="https://img.shields.io/github/stars/MarekWadinger/tf2ss?style=flat-square&color=E91E63&logo=github&logoColor=white" alt="stars"/>
+        <img src="https://img.shields.io/github/forks/MarekWadinger/tf2ss?style=flat-square&color=00BCD4&logo=github&logoColor=white" alt="forks"/>
         <a href="https://pypi.org/project/tf2ss/"><img src="https://img.shields.io/pypi/v/tf2ss?style=flat-square&color=E91E63&logo=pypi&logoColor=white" alt="pypi"/></a>
+      </p>
+      <p>
         <img src="https://img.shields.io/badge/MIMO-00BCD4?style=flat-square" alt="MIMO"/>
         <img src="https://img.shields.io/badge/no%20Fortran-FF1F8E?style=flat-square" alt="no fortran"/>
       </p>
@@ -72,20 +78,26 @@ fun_fact:    "I write Python by day and MATLAB package managers by night."
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/MarekWadinger/tbxmanager">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MarekWadinger&repo=tbxmanager&hide_border=true&bg_color=0D1117&title_color=E91E63&icon_color=00BCD4&text_color=F8F8F2" alt="tbxmanager"/>
-      </a>
-      <p align="center">
+      <h3><a href="https://github.com/MarekWadinger/tbxmanager">📦 tbxmanager</a></h3>
+      <p>A modern package manager for MATLAB &mdash; inspired by <code>uv</code>, with a community registry and CI publishing action.</p>
+      <p>
+        <img src="https://img.shields.io/github/stars/MarekWadinger/tbxmanager?style=flat-square&color=E91E63&logo=github&logoColor=white" alt="stars"/>
+        <img src="https://img.shields.io/github/forks/MarekWadinger/tbxmanager?style=flat-square&color=00BCD4&logo=github&logoColor=white" alt="forks"/>
+        <a href="https://github.com/MarekWadinger/tbxmanager-registry"><img src="https://img.shields.io/badge/registry-FF1F8E?style=flat-square" alt="registry"/></a>
+      </p>
+      <p>
         <img src="https://img.shields.io/badge/MATLAB-E91E63?style=flat-square&logo=mathworks&logoColor=white" alt="matlab"/>
         <img src="https://img.shields.io/badge/package%20manager-00BCD4?style=flat-square" alt="package manager"/>
         <img src="https://img.shields.io/badge/uv--inspired-FF1F8E?style=flat-square" alt="uv-inspired"/>
       </p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/MarekWadinger/ai-operator">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MarekWadinger&repo=ai-operator&hide_border=true&bg_color=0D1117&title_color=E91E63&icon_color=00BCD4&text_color=F8F8F2" alt="ai-operator"/>
-      </a>
-      <p align="center">
+      <h3>🤖 ai-operator <sub><sup>(private &middot; WIP)</sup></sub></h3>
+      <p>Agentic-AI assistant for industrial monitoring &mdash; LLMs paired with MCP tooling that diagnose, explain, and act on plant data.</p>
+      <p>
+        <img src="https://img.shields.io/badge/status-private%20preview-555?style=flat-square&logo=github&logoColor=white" alt="status"/>
+      </p>
+      <p>
         <img src="https://img.shields.io/badge/agentic%20AI-E91E63?style=flat-square" alt="agentic ai"/>
         <img src="https://img.shields.io/badge/MCP-00BCD4?style=flat-square" alt="mcp"/>
         <img src="https://img.shields.io/badge/in%20progress-FF1F8E?style=flat-square" alt="in progress"/>
@@ -130,8 +142,17 @@ fun_fact:    "I write Python by day and MATLAB package managers by night."
 ## The numbers
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=MarekWadinger&show_icons=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=E91E63&icon_color=00BCD4&text_color=F8F8F2&ring_color=E91E63" alt="stats"/>
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MarekWadinger&layout=compact&hide_border=true&bg_color=0D1117&title_color=E91E63&text_color=F8F8F2&langs_count=8" alt="languages"/>
+  <img src="https://img.shields.io/github/followers/MarekWadinger?style=for-the-badge&color=E91E63&logo=github&logoColor=white&label=FOLLOWERS&labelColor=0D1117" alt="followers"/>
+  <img src="https://img.shields.io/github/stars/MarekWadinger?style=for-the-badge&affiliations=OWNER&color=00BCD4&logo=github&logoColor=white&label=TOTAL+STARS&labelColor=0D1117" alt="total stars"/>
+  <img src="https://img.shields.io/badge/PUBLIC+REPOS-28-FF1F8E?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="public repos"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-84.7%25-E91E63?style=flat-square&logo=python&logoColor=white&labelColor=0D1117" alt="python"/>
+  <img src="https://img.shields.io/badge/Jupyter-9.2%25-00BCD4?style=flat-square&logo=jupyter&logoColor=white&labelColor=0D1117" alt="jupyter"/>
+  <img src="https://img.shields.io/badge/MATLAB-2.5%25-FF1F8E?style=flat-square&logo=mathworks&logoColor=white&labelColor=0D1117" alt="matlab"/>
+  <img src="https://img.shields.io/badge/TeX-2.4%25-E91E63?style=flat-square&logo=latex&logoColor=white&labelColor=0D1117" alt="tex"/>
+  <img src="https://img.shields.io/badge/Other-1.2%25-00BCD4?style=flat-square&labelColor=0D1117" alt="other"/>
 </p>
 
 <p align="center">
