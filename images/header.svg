@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="Marek Wadinger — Process Control, Online ML, Agentic AI">
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#1B1B22"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </radialGradient>
+
+    <linearGradient id="mA" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#9C1450" stop-opacity="0.45"/>
+      <stop offset="22%"  stop-color="#E91E63" stop-opacity="1"/>
+      <stop offset="78%"  stop-color="#FF4FA8" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FF4FA8" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="mB" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#A02061" stop-opacity="0.45"/>
+      <stop offset="22%"  stop-color="#D6307A" stop-opacity="1"/>
+      <stop offset="78%"  stop-color="#FF6BB5" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FF6BB5" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="mC" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#7C0E40" stop-opacity="0.40"/>
+      <stop offset="22%"  stop-color="#B8195A" stop-opacity="1"/>
+      <stop offset="78%"  stop-color="#E91E63" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#E91E63" stop-opacity="0.55"/>
+    </linearGradient>
+
+    <linearGradient id="cA" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#006D7A" stop-opacity="0.45"/>
+      <stop offset="22%"  stop-color="#00BCD4" stop-opacity="1"/>
+      <stop offset="78%"  stop-color="#7AE7F2" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#7AE7F2" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="cB" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#008090" stop-opacity="0.45"/>
+      <stop offset="22%"  stop-color="#1FB5C7" stop-opacity="1"/>
+      <stop offset="78%"  stop-color="#9EF2FB" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#9EF2FB" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="cC" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#004E5A" stop-opacity="0.40"/>
+      <stop offset="22%"  stop-color="#0096AA" stop-opacity="1"/>
+      <stop offset="78%"  stop-color="#00BCD4" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#00BCD4" stop-opacity="0.55"/>
+    </linearGradient>
+
+    <linearGradient id="shimmer" x1="-30%" y1="0%" x2="30%" y2="0%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#E91E63" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FF1F8E" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#00BCD4" stop-opacity="0"/>
+      <animate attributeName="x1" values="-50%;100%" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0%;150%" dur="3.5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025 0.06" numOctaves="2" seed="7" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="4"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#vignette)"/>
+
+  <!--
+    20 strokes total (10 per cluster). Each has its own:
+      width, length, perpendicular offset, base opacity, gradient shade,
+      paint direction (normal ↗ or reversed ↙), cycle duration, begin offset,
+      and timing pattern (A=balanced, B=fast paint/long hold, C=slow paint/slow fade, D=ghost).
+    Durations are near-co-prime (3.7…13.1s) so the global LCM is in the thousands of seconds —
+    you'd have to watch for ~30 minutes to see the same composition twice.
+    2 ghost strokes per cluster (M10, C10) at very low opacity never fully fade — they
+    anchor the cluster silhouette while the rest churn.
+  -->
+  <g filter="url(#rough)" stroke-linecap="round" fill="none" stroke-dasharray="600">
+
+    <!-- ============== MAGENTA CLUSTER ============== -->
+
+    <!-- M01 thick·A·8.7s -->
+    <path d="M 111 343 L 394 -20" stroke="url(#mA)" stroke-width="32" stroke-opacity="0.80">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="8.7s"  begin="0s"   repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="8.7s"  begin="0s"   repeatCount="indefinite"/>
+    </path>
+    <!-- M02 chunky·B·6.3s·reversed -->
+    <path d="M 349 -3 L 116 296" stroke="url(#mB)" stroke-width="24" stroke-opacity="0.74">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.6;0.7;0.75;0.751;1"  dur="6.3s"  begin="1.4s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.7;0.75;0.82;1"        dur="6.3s"  begin="1.4s" repeatCount="indefinite"/>
+    </path>
+    <!-- M03 med·A·10.1s -->
+    <path d="M 143 343 L 401 12" stroke="url(#mC)" stroke-width="18" stroke-opacity="0.68">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="10.1s" begin="2.7s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="10.1s" begin="2.7s" repeatCount="indefinite"/>
+    </path>
+    <!-- M04 med·C·5.1s·reversed -->
+    <path d="M 336 25 L 140 277" stroke="url(#mA)" stroke-width="14" stroke-opacity="0.62">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.3;0.5;0.55;0.551;1"  dur="5.1s"  begin="4.0s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.5;0.55;0.85;1"        dur="5.1s"  begin="4.0s" repeatCount="indefinite"/>
+    </path>
+    <!-- M05 thin·B·11.7s -->
+    <path d="M 117 361 L 412 -18" stroke="url(#mB)" stroke-width="10" stroke-opacity="0.58">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.6;0.7;0.75;0.751;1"  dur="11.7s" begin="5.3s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.7;0.75;0.82;1"        dur="11.7s" begin="5.3s" repeatCount="indefinite"/>
+    </path>
+    <!-- M06 thin·A·4.3s·reversed -->
+    <path d="M 312 18 L 128 255" stroke="url(#mC)" stroke-width="8" stroke-opacity="0.52">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="4.3s"  begin="6.5s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="4.3s"  begin="6.5s" repeatCount="indefinite"/>
+    </path>
+    <!-- M07 wisp·C·7.9s -->
+    <path d="M 124 341 L 395 -6" stroke="url(#mA)" stroke-width="6" stroke-opacity="0.46">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.3;0.5;0.55;0.551;1"  dur="7.9s"  begin="7.7s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.5;0.55;0.85;1"        dur="7.9s"  begin="7.7s" repeatCount="indefinite"/>
+    </path>
+    <!-- M08 wisp·A·9.3s·reversed -->
+    <path d="M 354 13 L 133 297" stroke="url(#mB)" stroke-width="4" stroke-opacity="0.42">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="9.3s"  begin="8.9s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="9.3s"  begin="8.9s" repeatCount="indefinite"/>
+    </path>
+    <!-- M09 chunky·B·12.3s -->
+    <path d="M 157 341 L 403 26" stroke="url(#mC)" stroke-width="20" stroke-opacity="0.65">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.6;0.7;0.75;0.751;1"  dur="12.3s" begin="2.0s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.7;0.75;0.82;1"        dur="12.3s" begin="2.0s" repeatCount="indefinite"/>
+    </path>
+    <!-- M10 ghost·D·13.1s — never fully fades, gentle breathing -->
+    <path d="M 331 8 L 122 276" stroke="url(#mA)" stroke-width="12" stroke-opacity="0.28">
+      <animate attributeName="opacity"           values="1;0.55;1;0.55;1" keyTimes="0;0.25;0.5;0.75;1"   dur="13.1s" begin="3.2s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- ============== CYAN CLUSTER ============== -->
+
+    <!-- C01 thick·A·7.7s·reversed -->
+    <path d="M 1081 -17 L 811 331" stroke="url(#cA)" stroke-width="30" stroke-opacity="0.82">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="7.7s"  begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="7.7s"  begin="0.6s" repeatCount="indefinite"/>
+    </path>
+    <!-- C02 chunky·C·5.9s -->
+    <path d="M 847 333 L 1093 18" stroke="url(#cC)" stroke-width="26" stroke-opacity="0.76">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.3;0.5;0.55;0.551;1"  dur="5.9s"  begin="1.9s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.5;0.55;0.85;1"        dur="5.9s"  begin="1.9s" repeatCount="indefinite"/>
+    </path>
+    <!-- C03 med·B·11.3s·reversed -->
+    <path d="M 1072 -37 L 789 326" stroke="url(#cB)" stroke-width="16" stroke-opacity="0.70">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.6;0.7;0.75;0.751;1"  dur="11.3s" begin="3.3s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.7;0.75;0.82;1"        dur="11.3s" begin="3.3s" repeatCount="indefinite"/>
+    </path>
+    <!-- C04 med·A·4.7s -->
+    <path d="M 870 288 L 1054 51" stroke="url(#cA)" stroke-width="12" stroke-opacity="0.64">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="4.7s"  begin="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="4.7s"  begin="4.5s" repeatCount="indefinite"/>
+    </path>
+    <!-- C05 thin·C·12.7s·reversed -->
+    <path d="M 1095 -56 L 776 354" stroke="url(#cC)" stroke-width="10" stroke-opacity="0.55">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.3;0.5;0.55;0.551;1"  dur="12.7s" begin="5.9s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.5;0.55;0.85;1"        dur="12.7s" begin="5.9s" repeatCount="indefinite"/>
+    </path>
+    <!-- C06 thin·A·3.7s -->
+    <path d="M 897 296 L 1069 75" stroke="url(#cB)" stroke-width="8" stroke-opacity="0.50">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="3.7s"  begin="7.1s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="3.7s"  begin="7.1s" repeatCount="indefinite"/>
+    </path>
+    <!-- C07 wisp·B·8.9s·reversed -->
+    <path d="M 1076 -21 L 805 326" stroke="url(#cA)" stroke-width="5" stroke-opacity="0.44">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.6;0.7;0.75;0.751;1"  dur="8.9s"  begin="8.3s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.7;0.75;0.82;1"        dur="8.9s"  begin="8.3s" repeatCount="indefinite"/>
+    </path>
+    <!-- C08 wisp·A·10.7s -->
+    <path d="M 840 315 L 1073 15" stroke="url(#cC)" stroke-width="3" stroke-opacity="0.40">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="10.7s" begin="9.4s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="10.7s" begin="9.4s" repeatCount="indefinite"/>
+    </path>
+    <!-- C09 chunky·C·9.1s·reversed -->
+    <path d="M 1031 -5 L 810 279" stroke="url(#cB)" stroke-width="22" stroke-opacity="0.60">
+      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.3;0.5;0.55;0.551;1"  dur="9.1s"  begin="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.5;0.55;0.85;1"        dur="9.1s"  begin="2.5s" repeatCount="indefinite"/>
+    </path>
+    <!-- C10 ghost·D·11.9s — never fully fades -->
+    <path d="M 846 345 L 1104 14" stroke="url(#cA)" stroke-width="14" stroke-opacity="0.30">
+      <animate attributeName="opacity"           values="1;0.55;1;0.55;1" keyTimes="0;0.25;0.5;0.75;1"   dur="11.9s" begin="3.8s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- title -->
+  <text x="600" y="175" text-anchor="middle"
+        font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="74" font-weight="800" fill="#FFFFFF" letter-spacing="1.5">
+    Marek Wadinger
+  </text>
+
+  <!-- subtitle -->
+  <text x="600" y="218" text-anchor="middle"
+        font-family="'JetBrains Mono', 'SF Mono', Menlo, Monaco, monospace"
+        font-size="15" fill="#F8F8F2" letter-spacing="6" opacity="0.85">
+    PROCESS CONTROL · ONLINE ML · AGENTIC AI
+  </text>
+
+  <!-- static base + sliding shimmer underline -->
+  <rect x="380" y="240" width="440" height="2" fill="#FFFFFF" opacity="0.08"/>
+  <rect x="380" y="240" width="440" height="2" fill="url(#shimmer)"/>
+
+  <!-- corner ticks (static) -->
+  <g stroke="#F8F8F2" stroke-width="1" opacity="0.25" fill="none">
+    <path d="M 20 20 L 20 50 M 20 20 L 50 20"/>
+    <path d="M 1180 20 L 1180 50 M 1180 20 L 1150 20"/>
+    <path d="M 20 300 L 20 270 M 20 300 L 50 300"/>
+    <path d="M 1180 300 L 1180 270 M 1180 300 L 1150 300"/>
+  </g>
+</svg>
