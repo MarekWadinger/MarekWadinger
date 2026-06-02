@@ -51,128 +51,153 @@
       <animate attributeName="x2" values="0%;150%" dur="3.5s" repeatCount="indefinite"/>
     </linearGradient>
 
-    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.025 0.06" numOctaves="2" seed="7" result="t"/>
-      <feDisplacementMap in="SourceGraphic" in2="t" scale="4"/>
+    <!-- Subtle edge texture only — no shake -->
+    <filter id="paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025 0.08" numOctaves="2" seed="7" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="2"/>
     </filter>
+
+    <!--
+      Per-stroke clipPaths. Each rect is translated to the stroke's start tip A,
+      rotated -45° (so local +X axis points up-right along stroke direction),
+      with width animated 0 → L → 0 across the cycle = directional paint-in
+      from bottom-left to top-right, then retraction while invisible.
+    -->
+
+    <clipPath id="clipM01"><rect x="0" y="-18" width="0" height="36" transform="translate(59 264) rotate(-45)"><animate attributeName="width" values="0;294;294;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="8.7s"  begin="0s"   repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipM02"><rect x="0" y="-16" width="0" height="32" transform="translate(59 250) rotate(-45)"><animate attributeName="width" values="0;274;274;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="7.5s"  begin="1.4s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipM03"><rect x="0" y="-14" width="0" height="28" transform="translate(93 248) rotate(-45)"><animate attributeName="width" values="0;224;224;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="6.3s"  begin="0.8s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipM04"><rect x="0" y="-12" width="0" height="24" transform="translate(81 222) rotate(-45)"><animate attributeName="width" values="0;204;204;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="10.1s" begin="2.7s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipM05"><rect x="0" y="-13" width="0" height="26" transform="translate(91 240) rotate(-45)"><animate attributeName="width" values="0;214;214;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="5.1s"  begin="4.0s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipM06"><rect x="0" y="-11" width="0" height="22" transform="translate(80 214) rotate(-45)"><animate attributeName="width" values="0;194;194;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="11.7s" begin="5.3s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipM07"><rect x="0" y="-10" width="0" height="20" transform="translate(111 238) rotate(-45)"><animate attributeName="width" values="0;184;184;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="4.3s"  begin="6.5s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipM08"><rect x="0" y="-12" width="0" height="24" transform="translate(107 220) rotate(-45)"><animate attributeName="width" values="0;164;164;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="7.9s"  begin="7.7s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipM09"><rect x="0" y="-10" width="0" height="20" transform="translate(107 206) rotate(-45)"><animate attributeName="width" values="0;144;144;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="9.3s"  begin="8.9s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipM10"><rect x="0" y="-9"  width="0" height="18" transform="translate(115 222) rotate(-45)"><animate attributeName="width" values="0;154;154;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="12.3s" begin="2.0s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipM11"><rect x="0" y="-8"  width="0" height="16" transform="translate(84 205) rotate(-45)"><animate attributeName="width" values="0;174;174;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="6.7s"  begin="3.3s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipM12"><rect x="0" y="-8"  width="0" height="16" transform="translate(134 226) rotate(-45)"><animate attributeName="width" values="0;134;134;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="13.1s" begin="3.2s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipM13"><rect x="0" y="-7"  width="0" height="14" transform="translate(89 188) rotate(-45)"><animate attributeName="width" values="0;144;144;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="5.9s"  begin="1.9s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipM14"><rect x="0" y="-7"  width="0" height="14" transform="translate(139 231) rotate(-45)"><animate attributeName="width" values="0;134;134;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="10.7s" begin="9.4s" repeatCount="indefinite"/></rect></clipPath>
+
+    <clipPath id="clipC01"><rect x="0" y="-18" width="0" height="36" transform="translate(936 268) rotate(-45)"><animate attributeName="width" values="0;304;304;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="8.9s"  begin="0.6s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipC02"><rect x="0" y="-16" width="0" height="32" transform="translate(937 252) rotate(-45)"><animate attributeName="width" values="0;279;279;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="7.7s"  begin="1.9s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipC03"><rect x="0" y="-14" width="0" height="28" transform="translate(971 250) rotate(-45)"><animate attributeName="width" values="0;229;229;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="6.5s"  begin="3.3s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipC04"><rect x="0" y="-12" width="0" height="24" transform="translate(959 224) rotate(-45)"><animate attributeName="width" values="0;209;209;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="10.3s" begin="4.5s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipC05"><rect x="0" y="-13" width="0" height="26" transform="translate(970 242) rotate(-45)"><animate attributeName="width" values="0;219;219;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="5.3s"  begin="5.9s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipC06"><rect x="0" y="-11" width="0" height="22" transform="translate(957 215) rotate(-45)"><animate attributeName="width" values="0;199;199;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="11.9s" begin="7.1s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipC07"><rect x="0" y="-10" width="0" height="20" transform="translate(990 241) rotate(-45)"><animate attributeName="width" values="0;189;189;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="4.5s"  begin="8.3s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipC08"><rect x="0" y="-12" width="0" height="24" transform="translate(985 222) rotate(-45)"><animate attributeName="width" values="0;169;169;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="8.1s"  begin="9.4s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipC09"><rect x="0" y="-10" width="0" height="20" transform="translate(985 208) rotate(-45)"><animate attributeName="width" values="0;149;149;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="9.7s"  begin="2.5s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipC10"><rect x="0" y="-9"  width="0" height="18" transform="translate(992 222) rotate(-45)"><animate attributeName="width" values="0;159;159;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="12.7s" begin="3.8s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipC11"><rect x="0" y="-8"  width="0" height="16" transform="translate(960 204) rotate(-45)"><animate attributeName="width" values="0;179;179;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="6.9s"  begin="2.5s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipC12"><rect x="0" y="-8"  width="0" height="16" transform="translate(1013 229) rotate(-45)"><animate attributeName="width" values="0;139;139;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="13.3s" begin="0s"   repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipC13"><rect x="0" y="-7"  width="0" height="14" transform="translate(966 189) rotate(-45)"><animate attributeName="width" values="0;149;149;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="5.7s"  begin="1.4s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="clipC14"><rect x="0" y="-7"  width="0" height="14" transform="translate(1019 235) rotate(-45)"><animate attributeName="width" values="0;139;139;0;0" keyTimes="0;0.15;0.85;0.95;1" dur="11.1s" begin="6.5s" repeatCount="indefinite"/></rect></clipPath>
   </defs>
 
   <rect width="1200" height="320" fill="url(#vignette)"/>
 
   <!--
-    20 strokes total (10 per cluster). Each has its own:
-      width, length, perpendicular offset, base opacity, gradient shade,
-      paint direction (normal ↗ or reversed ↙), cycle duration, begin offset,
-      and timing pattern (A=balanced, B=fast paint/long hold, C=slow paint/slow fade, D=ghost).
-    Durations are near-co-prime (3.7…13.1s) so the global LCM is in the thousands of seconds —
-    you'd have to watch for ~30 minutes to see the same composition twice.
-    2 ghost strokes per cluster (M10, C10) at very low opacity never fully fade — they
-    anchor the cluster silhouette while the rest churn.
+    28 active tapered-lens strokes + 2 ghosts. All at 45° (u=(s,-s)). Per-stroke
+    clipPath paints in bottom-left → top-right over 15% of cycle, holds 70%,
+    fades out via opacity over 15%, and retracts clipPath during invisible buffer.
   -->
-  <g filter="url(#rough)" stroke-linecap="round" fill="none" stroke-dasharray="600">
+  <g filter="url(#paper)">
 
     <!-- ============== MAGENTA CLUSTER ============== -->
-
-    <!-- M01 thick·A·8.7s -->
-    <path d="M 111 343 L 394 -20" stroke="url(#mA)" stroke-width="32" stroke-opacity="0.80">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="8.7s"  begin="0s"   repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="8.7s"  begin="0s"   repeatCount="indefinite"/>
+    <path d="M 59 264 Q 181 181 264 59 Q 142 142 59 264 Z" fill="url(#mA)" fill-opacity="0.85" clip-path="url(#clipM01)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="8.7s"  begin="0s"   repeatCount="indefinite"/>
     </path>
-    <!-- M02 chunky·B·6.3s·reversed -->
-    <path d="M 349 -3 L 116 296" stroke="url(#mB)" stroke-width="24" stroke-opacity="0.74">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.6;0.7;0.75;0.751;1"  dur="6.3s"  begin="1.4s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.7;0.75;0.82;1"        dur="6.3s"  begin="1.4s" repeatCount="indefinite"/>
+    <path d="M 59 250 Q 171 171 250 59 Q 137 137 59 250 Z" fill="url(#mB)" fill-opacity="0.78" clip-path="url(#clipM02)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="7.5s"  begin="1.4s" repeatCount="indefinite"/>
     </path>
-    <!-- M03 med·A·10.1s -->
-    <path d="M 143 343 L 401 12" stroke="url(#mC)" stroke-width="18" stroke-opacity="0.68">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="10.1s" begin="2.7s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="10.1s" begin="2.7s" repeatCount="indefinite"/>
+    <path d="M 93 248 Q 185 185 248 93 Q 156 156 93 248 Z" fill="url(#mC)" fill-opacity="0.72" clip-path="url(#clipM03)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="6.3s"  begin="0.8s" repeatCount="indefinite"/>
     </path>
-    <!-- M04 med·C·5.1s·reversed -->
-    <path d="M 336 25 L 140 277" stroke="url(#mA)" stroke-width="14" stroke-opacity="0.62">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.3;0.5;0.55;0.551;1"  dur="5.1s"  begin="4.0s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.5;0.55;0.85;1"        dur="5.1s"  begin="4.0s" repeatCount="indefinite"/>
+    <path d="M 81 222 Q 163 163 222 81 Q 140 140 81 222 Z" fill="url(#mA)" fill-opacity="0.68" clip-path="url(#clipM04)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="10.1s" begin="2.7s" repeatCount="indefinite"/>
     </path>
-    <!-- M05 thin·B·11.7s -->
-    <path d="M 117 361 L 412 -18" stroke="url(#mB)" stroke-width="10" stroke-opacity="0.58">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.6;0.7;0.75;0.751;1"  dur="11.7s" begin="5.3s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.7;0.75;0.82;1"        dur="11.7s" begin="5.3s" repeatCount="indefinite"/>
+    <path d="M 91 240 Q 178 178 240 91 Q 153 153 91 240 Z" fill="url(#mB)" fill-opacity="0.65" clip-path="url(#clipM05)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="5.1s"  begin="4.0s" repeatCount="indefinite"/>
     </path>
-    <!-- M06 thin·A·4.3s·reversed -->
-    <path d="M 312 18 L 128 255" stroke="url(#mC)" stroke-width="8" stroke-opacity="0.52">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="4.3s"  begin="6.5s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="4.3s"  begin="6.5s" repeatCount="indefinite"/>
+    <path d="M 80 214 Q 157 157 214 80 Q 137 137 80 214 Z" fill="url(#mC)" fill-opacity="0.60" clip-path="url(#clipM06)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="11.7s" begin="5.3s" repeatCount="indefinite"/>
     </path>
-    <!-- M07 wisp·C·7.9s -->
-    <path d="M 124 341 L 395 -6" stroke="url(#mA)" stroke-width="6" stroke-opacity="0.46">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.3;0.5;0.55;0.551;1"  dur="7.9s"  begin="7.7s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.5;0.55;0.85;1"        dur="7.9s"  begin="7.7s" repeatCount="indefinite"/>
+    <path d="M 111 238 Q 183 183 238 110 Q 166 166 111 238 Z" fill="url(#mA)" fill-opacity="0.55" clip-path="url(#clipM07)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="4.3s"  begin="6.5s" repeatCount="indefinite"/>
     </path>
-    <!-- M08 wisp·A·9.3s·reversed -->
-    <path d="M 354 13 L 133 297" stroke="url(#mB)" stroke-width="4" stroke-opacity="0.42">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="9.3s"  begin="8.9s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="9.3s"  begin="8.9s" repeatCount="indefinite"/>
+    <path d="M 107 220 Q 175 175 220 107 Q 152 152 107 220 Z" fill="url(#mB)" fill-opacity="0.70" clip-path="url(#clipM08)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="7.9s"  begin="7.7s" repeatCount="indefinite"/>
     </path>
-    <!-- M09 chunky·B·12.3s -->
-    <path d="M 157 341 L 403 26" stroke="url(#mC)" stroke-width="20" stroke-opacity="0.65">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.6;0.7;0.75;0.751;1"  dur="12.3s" begin="2.0s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.7;0.75;0.82;1"        dur="12.3s" begin="2.0s" repeatCount="indefinite"/>
+    <path d="M 107 206 Q 165 165 206 107 Q 148 148 107 206 Z" fill="url(#mC)" fill-opacity="0.65" clip-path="url(#clipM09)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="9.3s"  begin="8.9s" repeatCount="indefinite"/>
     </path>
-    <!-- M10 ghost·D·13.1s — never fully fades, gentle breathing -->
-    <path d="M 331 8 L 122 276" stroke="url(#mA)" stroke-width="12" stroke-opacity="0.28">
-      <animate attributeName="opacity"           values="1;0.55;1;0.55;1" keyTimes="0;0.25;0.5;0.75;1"   dur="13.1s" begin="3.2s" repeatCount="indefinite"/>
+    <path d="M 115 222 Q 176 176 222 115 Q 161 161 115 222 Z" fill="url(#mA)" fill-opacity="0.58" clip-path="url(#clipM10)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="12.3s" begin="2.0s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 84 205 Q 150 150 205 84 Q 139 139 84 205 Z" fill="url(#mB)" fill-opacity="0.50" clip-path="url(#clipM11)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="6.7s"  begin="3.3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 134 226 Q 185 185 226 134 Q 174 174 134 226 Z" fill="url(#mC)" fill-opacity="0.45" clip-path="url(#clipM12)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="13.1s" begin="3.2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 89 188 Q 143 143 188 89 Q 135 135 89 188 Z" fill="url(#mA)" fill-opacity="0.40" clip-path="url(#clipM13)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="5.9s"  begin="1.9s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 139 231 Q 189 189 231 139 Q 181 181 139 231 Z" fill="url(#mB)" fill-opacity="0.38" clip-path="url(#clipM14)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="10.7s" begin="9.4s" repeatCount="indefinite"/>
+    </path>
+    <!-- M15 ghost — no clip, gentle opacity breathing only -->
+    <path d="M 107 192 Q 155 155 192 107 Q 144 144 107 192 Z" fill="url(#mC)" fill-opacity="0.35">
+      <animate attributeName="opacity" values="0.6;1;0.6;1;0.6" keyTimes="0;0.25;0.5;0.75;1" dur="11.9s" begin="3.8s" repeatCount="indefinite"/>
     </path>
 
     <!-- ============== CYAN CLUSTER ============== -->
-
-    <!-- C01 thick·A·7.7s·reversed -->
-    <path d="M 1081 -17 L 811 331" stroke="url(#cA)" stroke-width="30" stroke-opacity="0.82">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="7.7s"  begin="0.6s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="7.7s"  begin="0.6s" repeatCount="indefinite"/>
+    <path d="M 936 268 Q 1062 182 1148 56 Q 1022 142 936 268 Z" fill="url(#cA)" fill-opacity="0.85" clip-path="url(#clipC01)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="8.9s"  begin="0.6s" repeatCount="indefinite"/>
     </path>
-    <!-- C02 chunky·C·5.9s -->
-    <path d="M 847 333 L 1093 18" stroke="url(#cC)" stroke-width="26" stroke-opacity="0.76">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.3;0.5;0.55;0.551;1"  dur="5.9s"  begin="1.9s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.5;0.55;0.85;1"        dur="5.9s"  begin="1.9s" repeatCount="indefinite"/>
+    <path d="M 937 252 Q 1051 171 1132 57 Q 1017 137 937 252 Z" fill="url(#cB)" fill-opacity="0.80" clip-path="url(#clipC02)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="7.7s"  begin="1.9s" repeatCount="indefinite"/>
     </path>
-    <!-- C03 med·B·11.3s·reversed -->
-    <path d="M 1072 -37 L 789 326" stroke="url(#cB)" stroke-width="16" stroke-opacity="0.70">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.6;0.7;0.75;0.751;1"  dur="11.3s" begin="3.3s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.7;0.75;0.82;1"        dur="11.3s" begin="3.3s" repeatCount="indefinite"/>
+    <path d="M 971 250 Q 1065 185 1130 91 Q 1036 156 971 250 Z" fill="url(#cC)" fill-opacity="0.74" clip-path="url(#clipC03)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="6.5s"  begin="3.3s" repeatCount="indefinite"/>
     </path>
-    <!-- C04 med·A·4.7s -->
-    <path d="M 870 288 L 1054 51" stroke="url(#cA)" stroke-width="12" stroke-opacity="0.64">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="4.7s"  begin="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="4.7s"  begin="4.5s" repeatCount="indefinite"/>
+    <path d="M 959 224 Q 1043 163 1104 79 Q 1020 140 959 224 Z" fill="url(#cA)" fill-opacity="0.68" clip-path="url(#clipC04)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="10.3s" begin="4.5s" repeatCount="indefinite"/>
     </path>
-    <!-- C05 thin·C·12.7s·reversed -->
-    <path d="M 1095 -56 L 776 354" stroke="url(#cC)" stroke-width="10" stroke-opacity="0.55">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.3;0.5;0.55;0.551;1"  dur="12.7s" begin="5.9s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.5;0.55;0.85;1"        dur="12.7s" begin="5.9s" repeatCount="indefinite"/>
+    <path d="M 970 242 Q 1059 179 1122 90 Q 1034 154 970 242 Z" fill="url(#cB)" fill-opacity="0.62" clip-path="url(#clipC05)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="5.3s"  begin="5.9s" repeatCount="indefinite"/>
     </path>
-    <!-- C06 thin·A·3.7s -->
-    <path d="M 897 296 L 1069 75" stroke="url(#cB)" stroke-width="8" stroke-opacity="0.50">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="3.7s"  begin="7.1s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="3.7s"  begin="7.1s" repeatCount="indefinite"/>
+    <path d="M 957 215 Q 1036 156 1095 77 Q 1016 136 957 215 Z" fill="url(#cC)" fill-opacity="0.58" clip-path="url(#clipC06)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="11.9s" begin="7.1s" repeatCount="indefinite"/>
     </path>
-    <!-- C07 wisp·B·8.9s·reversed -->
-    <path d="M 1076 -21 L 805 326" stroke="url(#cA)" stroke-width="5" stroke-opacity="0.44">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.6;0.7;0.75;0.751;1"  dur="8.9s"  begin="8.3s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.7;0.75;0.82;1"        dur="8.9s"  begin="8.3s" repeatCount="indefinite"/>
+    <path d="M 990 241 Q 1064 184 1121 110 Q 1047 167 990 241 Z" fill="url(#cA)" fill-opacity="0.52" clip-path="url(#clipC07)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="4.5s"  begin="8.3s" repeatCount="indefinite"/>
     </path>
-    <!-- C08 wisp·A·10.7s -->
-    <path d="M 840 315 L 1073 15" stroke="url(#cC)" stroke-width="3" stroke-opacity="0.40">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.45;0.55;0.6;0.601;1" dur="10.7s" begin="9.4s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.55;0.6;0.75;1"        dur="10.7s" begin="9.4s" repeatCount="indefinite"/>
+    <path d="M 985 222 Q 1055 175 1102 105 Q 1032 152 985 222 Z" fill="url(#cB)" fill-opacity="0.68" clip-path="url(#clipC08)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="8.1s"  begin="9.4s" repeatCount="indefinite"/>
     </path>
-    <!-- C09 chunky·C·9.1s·reversed -->
-    <path d="M 1031 -5 L 810 279" stroke="url(#cB)" stroke-width="22" stroke-opacity="0.60">
-      <animate attributeName="opacity"           values="1;1;0;0;1;1" keyTimes="0;0.3;0.5;0.55;0.551;1"  dur="9.1s"  begin="2.5s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;0;600;0;0" keyTimes="0;0.5;0.55;0.85;1"        dur="9.1s"  begin="2.5s" repeatCount="indefinite"/>
+    <path d="M 985 208 Q 1045 165 1088 105 Q 1028 148 985 208 Z" fill="url(#cC)" fill-opacity="0.62" clip-path="url(#clipC09)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="9.7s"  begin="2.5s" repeatCount="indefinite"/>
     </path>
-    <!-- C10 ghost·D·11.9s — never fully fades -->
-    <path d="M 846 345 L 1104 14" stroke="url(#cA)" stroke-width="14" stroke-opacity="0.30">
-      <animate attributeName="opacity"           values="1;0.55;1;0.55;1" keyTimes="0;0.25;0.5;0.75;1"   dur="11.9s" begin="3.8s" repeatCount="indefinite"/>
+    <path d="M 992 222 Q 1054 174 1102 112 Q 1040 160 992 222 Z" fill="url(#cA)" fill-opacity="0.55" clip-path="url(#clipC10)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="12.7s" begin="3.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 960 204 Q 1028 148 1084 80 Q 1017 137 960 204 Z" fill="url(#cB)" fill-opacity="0.48" clip-path="url(#clipC11)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="6.9s"  begin="2.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 1013 229 Q 1067 187 1109 133 Q 1056 176 1013 229 Z" fill="url(#cC)" fill-opacity="0.42" clip-path="url(#clipC12)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="13.3s" begin="0s"   repeatCount="indefinite"/>
+    </path>
+    <path d="M 966 189 Q 1022 142 1069 86 Q 1013 133 966 189 Z" fill="url(#cA)" fill-opacity="0.40" clip-path="url(#clipC13)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="5.7s"  begin="1.4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 1019 235 Q 1071 191 1115 139 Q 1063 183 1019 235 Z" fill="url(#cB)" fill-opacity="0.36" clip-path="url(#clipC14)">
+      <animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.15;0.7;0.85;1" dur="11.1s" begin="6.5s" repeatCount="indefinite"/>
+    </path>
+    <!-- C15 ghost -->
+    <path d="M 985 194 Q 1035 155 1074 105 Q 1024 144 985 194 Z" fill="url(#cC)" fill-opacity="0.35">
+      <animate attributeName="opacity" values="0.6;1;0.6;1;0.6" keyTimes="0;0.25;0.5;0.75;1" dur="12.1s" begin="2.7s" repeatCount="indefinite"/>
     </path>
   </g>
 
@@ -194,7 +219,7 @@
   <rect x="380" y="240" width="440" height="2" fill="#FFFFFF" opacity="0.08"/>
   <rect x="380" y="240" width="440" height="2" fill="url(#shimmer)"/>
 
-  <!-- corner ticks (static) -->
+  <!-- corner ticks -->
   <g stroke="#F8F8F2" stroke-width="1" opacity="0.25" fill="none">
     <path d="M 20 20 L 20 50 M 20 20 L 50 20"/>
     <path d="M 1180 20 L 1180 50 M 1180 20 L 1150 20"/>
